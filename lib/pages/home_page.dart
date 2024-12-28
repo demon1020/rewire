@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rewire/pages/calendar_page.dart';
 import 'package:rewire/pages/routines_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,10 +15,7 @@ class _HomePageState extends State<HomePage> {
   // List of widgets corresponding to each tab
   static final List<Widget> _widgetOptions = <Widget>[
     RoutinesPage(),
-    SafeArea(
-      child: Text('Settings Page',
-          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
-    ),
+    CalendarPage(),
   ];
 
   void _onItemTapped(int index) {
