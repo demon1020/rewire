@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rewire/pages/calendar_page.dart';
+import 'package:rewire/pages/profile_page.dart';
 import 'package:rewire/pages/routines_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   static final List<Widget> _widgetOptions = <Widget>[
     RoutinesPage(),
     CalendarPage(),
+    ProfilePage()
   ];
 
   void _onItemTapped(int index) {
@@ -34,12 +37,16 @@ class _HomePageState extends State<HomePage> {
         onTap: _onItemTapped,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(CupertinoIcons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(CupertinoIcons.calendar),
+            label: 'Calendar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.person),
+            label: 'Profile',
           ),
         ],
       ),
